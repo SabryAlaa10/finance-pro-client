@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 import { Lock, User, Sparkles, ShieldCheck } from 'lucide-react';
@@ -160,6 +161,15 @@ const Login = () => {
                     <ShieldCheck size={16} />
                     <span>Secured with end-to-end encryption</span>
                 </motion.div>
+
+                <motion.p
+                    className="register-link"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.45 }}
+                >
+                    Don't have an account? <Link to="/register">Sign Up</Link>
+                </motion.p>
 
                 <p className="login-footer">
                     Finance PRO Dashboard © 2026 | All rights reserved
